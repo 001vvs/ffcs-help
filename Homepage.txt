@@ -1,0 +1,33 @@
+import streamlit as st 
+from PIL import Image
+import json
+import requests
+from streamlit_lottie import st_lottie
+
+
+st.set_page_config(page_title="FFCS HELP",page_icon=":notebook:",layout="wide")
+
+def load_lottieurl(url):
+    r= requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+
+
+lottie_coding=load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_ryawvk4g.json")
+
+
+with st.container():
+    st.subheader("FFCS HELP")
+    st.title("Teacher rating system")
+    st.write("""As we know that when the ffcs happened we all were confused about the teachers who all were actually good and who all were not. So to have a proper judgement system about teachers was neccessary. so we tried to resolve your problem""")
+
+with st.container():
+    st.write("---")
+    left_column,right_column =st.columns(2)
+    with left_column:
+        st.header("what we do")
+        st.write("##")
+        st.write('''So peeps, you can explore about the particular subject teachers and there ratings and there remarks.''')
+    with right_column:
+        st_lottie(lottie_coding,height=300,key="coding")

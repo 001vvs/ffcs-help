@@ -1,0 +1,21 @@
+import streamlit as st
+
+
+header = st.container()
+dataset = st.container()
+features = st.container()
+review = st.container()
+
+with header:
+    st.title('Faculty Information')
+with dataset:
+    st.header('proffessor name')
+    st.text('emp. ID:')
+    st.text('school:')
+with features:
+    st.header('notes')
+    st.header('explanation')
+    st.header('strictness in class')
+    st.header('strictness in attendance')
+with review:
+    st.header('review')

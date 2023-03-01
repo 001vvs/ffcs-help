@@ -1,0 +1,66 @@
+#instead of "http://172.16.42.42:8507" use the link obtained after running code file 1
+
+
+import streamlit as s
+
+s.set_page_config(page_title='Subjects', layout = 'wide')
+
+with s.container():
+    s.title("Subjects")
+
+with s.container():
+    s.write('---')
+    s.write("")
+    opt = s.selectbox('Select the subject you would like to find or type it in the menu:', ('Chemistry', 'Physics', "Calculus"))
+
+if opt == 'Physics':
+    s.title("List of Faculty ")
+    contact_form="""<a href=http://172.16.42.42:8507>
+    <button>Professor1</button>"""
+    left_column, right_column=s.columns(2)
+    with left_column:
+        s.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        s.empty()
+    contact="""<a href=http://172.16.42.42:8507>
+    <button>Professor2</button>"""
+    left_column, right_column=s.columns(2)
+    with left_column:
+        s.markdown(contact, unsafe_allow_html=True)
+    with right_column:
+        s.empty()
+
+if opt == 'Chemistry':
+    s.subheader("List of Faculty ")
+    s.title("List of Faculty ")
+    contact_form="""<a href=http://172.16.42.42:8507>
+    <button>Professor1</button>"""
+    left_column, right_column=s.columns(2)
+    with left_column:
+        s.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        s.empty()
+    contact="""<a href=http://172.16.42.42:8507>
+    <button>Professor2</button>"""
+    left_column, right_column=s.columns(2)
+    with left_column:
+        s.markdown(contact, unsafe_allow_html=True)
+    with right_column:
+        s.empty()
+if opt == 'Calculus':
+    s.title("List of Faculty ")
+    s.title("List of Faculty ")
+    contact_form="""<a href=http://172.16.42.42:8507>
+    <button>Professor1</button>"""
+    left_column, right_column=s.columns(2)
+    with left_column:
+        s.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        s.empty()
+    contact="""<a href=http://172.16.42.42:8507>
+    <button>Professor2</button>"""
+    left_column, right_column=s.columns(2)
+    with left_column:
+        s.markdown(contact, unsafe_allow_html=True)
+    with right_column:
+        s.empty()
