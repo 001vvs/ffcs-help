@@ -1,5 +1,6 @@
 # ffcs-help
 code is written in python
+
 -create a folder and create a new python file "codefile1.py" in vscode
 -Open codefile1.txt code and paste it in codefile1.py in vscode
 -write in terminal: 
